@@ -1,21 +1,21 @@
 # Changelog 
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org) for the commit message format.
-## [2.2.0](https://github.com/isaaceindhoven/composer-git-hooks/compare/v2.1.0...v2.2.0) (2023-02-22)
+## [2.2.0](https://github.com/iodigital-com/composer-git-hooks/compare/v2.1.0...v2.2.0) (2023-02-22)
 
 
 ### Features
 
-* Added php 8.2 support ([710fd73](https://github.com/isaaceindhoven/composer-git-hooks/commit/710fd73814586114d1b61b3e33b78ae08a139d27))
+* Added php 8.2 support ([710fd73](https://github.com/iodigital-com/composer-git-hooks/commit/710fd73814586114d1b61b3e33b78ae08a139d27))
 
-## [2.1.0](https://github.com/isaaceindhoven/composer-git-hooks/compare/v2.0.0...v2.1.0) (2022-07-18)
+## [2.1.0](https://github.com/iodigital-com/composer-git-hooks/compare/v2.0.0...v2.1.0) (2022-07-18)
 
 
 ### Features
 
-* **ICOMP-716:** The plugin's console output is less chatty - only warnings and errors are shown by default. All output can be shown by running composer in verbose mode (--verbose or -vv). Changed the 'no project root found' error to a warning. ([a34205b](https://github.com/isaaceindhoven/composer-git-hooks/commit/a34205b03249d1b537f146f52ce39b2341342148))
+* **ICOMP-716:** The plugin's console output is less chatty - only warnings and errors are shown by default. All output can be shown by running composer in verbose mode (--verbose or -vv). Changed the 'no project root found' error to a warning. ([a34205b](https://github.com/iodigital-com/composer-git-hooks/commit/a34205b03249d1b537f146f52ce39b2341342148))
 
-## [2.0.0](https://github.com/isaaceindhoven/composer-git-hooks/compare/v1.3.0...v2.0.0) (2022-05-23)
+## [2.0.0](https://github.com/iodigital-com/composer-git-hooks/compare/v1.3.0...v2.0.0) (2022-05-23)
 
 
 ### ⚠ BREAKING CHANGES
@@ -24,22 +24,22 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-* Add PHP 8.1 support ([a7591bc](https://github.com/isaaceindhoven/composer-git-hooks/commit/a7591bc2360305aead63d0a04d140cb169397ef2))
-* Add php_version and testVersion to phpcs.xml ([43d9909](https://github.com/isaaceindhoven/composer-git-hooks/commit/43d99093419d5cf1a067351cf7f5e5389d88a466))
-* Remove Composer 1 support ([896ccf3](https://github.com/isaaceindhoven/composer-git-hooks/commit/896ccf33fed58b26c7b9f96835ab65045accf671))
-* Update ISAAC coding standard version to 27 ([538e81f](https://github.com/isaaceindhoven/composer-git-hooks/commit/538e81f8167190abe917b6113d1e941d8cc510a6))
+* Add PHP 8.1 support ([a7591bc](https://github.com/iodigital-com/composer-git-hooks/commit/a7591bc2360305aead63d0a04d140cb169397ef2))
+* Add php_version and testVersion to phpcs.xml ([43d9909](https://github.com/iodigital-com/composer-git-hooks/commit/43d99093419d5cf1a067351cf7f5e5389d88a466))
+* Remove Composer 1 support ([896ccf3](https://github.com/iodigital-com/composer-git-hooks/commit/896ccf33fed58b26c7b9f96835ab65045accf671))
+* Update ISAAC coding standard version to 27 ([538e81f](https://github.com/iodigital-com/composer-git-hooks/commit/538e81f8167190abe917b6113d1e941d8cc510a6))
 
-## [1.3.0](https://github.com/isaaceindhoven/composer-git-hooks/compare/v1.2.0...v1.3.0) (2022-04-25)
+## [1.3.0](https://github.com/iodigital-com/composer-git-hooks/compare/v1.2.0...v1.3.0) (2022-04-25)
 
 
 ### Features
 
-* Remove PHP 7.3 support ([d98c628](https://github.com/isaaceindhoven/composer-git-hooks/commit/d98c62818557657279949a640d2c4c068a7fb50d))
+* Remove PHP 7.3 support ([d98c628](https://github.com/iodigital-com/composer-git-hooks/commit/d98c62818557657279949a640d2c4c068a7fb50d))
 
 
 ### Documentation
 
-* Add section on allow-plugins to README ([d385c30](https://github.com/isaaceindhoven/composer-git-hooks/commit/d385c303c80ae6e23e0d9d923cf9fc7309a9dc53))
+* Add section on allow-plugins to README ([d385c30](https://github.com/iodigital-com/composer-git-hooks/commit/d385c303c80ae6e23e0d9d923cf9fc7309a9dc53))
 
 ## 1.2.0 (2021-02-09)
 
@@ -49,7 +49,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Bug Fixes
 
-* Before unlinking files from previous installs, check if we are actually dealing with either an existing file or existing symlink ([a3c5964](https://github.com/isaaceindhoven/composer-git-hooks/commit/a3c596443639cd71b9a8b1132bc20a8504574651))
+* Before unlinking files from previous installs, check if we are actually dealing with either an existing file or existing symlink ([a3c5964](https://github.com/iodigital-com/composer-git-hooks/commit/a3c596443639cd71b9a8b1132bc20a8504574651))
 
 ## [1.1.0] - 2020-12-22
 ### Added

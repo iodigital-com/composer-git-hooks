@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ISAAC\ComposerGitHooks\Exception;
+namespace IODigital\ComposerGitHooks\Exception;
 
 use Exception;
 

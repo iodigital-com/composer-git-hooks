@@ -1,15 +1,14 @@
 {
-    "name": "isaac/composer-git-hooks",
+    "name": "iodigital-com/composer-git-hooks",
+    "conflict": {
+        "isaac/composer-git-hooks": "*"
+    },
+    "replace": {
+        "isaac/composer-git-hooks": "*"
+    },
     "type": "composer-plugin",
     "license": "MIT",
-    "description": "ISAAC Composer Git Hooks",
-    "authors": [
-        {
-            "name": "ISAAC",
-            "email": "info@isaac.nl",
-            "homepage": "https://www.isaac.nl"
-        }
-    ],
+    "description": "iO Composer Git Hooks",
     "minimum-stability": "stable",
     "config": {
         "sort-packages": true,
@@ -24,22 +23,22 @@
     },
     "require-dev": {
         "composer/composer": "^2.0",
-        "isaac/php-code-sniffer-standard": "^28.2.0",
+        "iodigital-com/php-code-sniffer-standard": "^29.0",
         "slevomat/coding-standard": "^7.1.0 || ^8.0",
         "phpstan/extension-installer": "^1.2.0",
         "phpstan/phpstan": "^1.10.1",
         "phpstan/phpstan-strict-rules": "^1.5.0"
     },
     "scripts": {
-        "post-install-cmd": "ISAAC\\ComposerGitHooks\\ComposerPlugin::process",
-        "post-update-cmd": "ISAAC\\ComposerGitHooks\\ComposerPlugin::process"
+        "post-install-cmd": "IODigital\\ComposerGitHooks\\ComposerPlugin::process",
+        "post-update-cmd": "IODigital\\ComposerGitHooks\\ComposerPlugin::process"
     },
     "autoload": {
         "psr-4": {
-            "ISAAC\\ComposerGitHooks\\": "src/"
+            "IODigital\\ComposerGitHooks\\": "src/"
         }
     },
     "extra": {
-        "class": "ISAAC\\ComposerGitHooks\\ComposerPlugin"
+        "class": "IODigital\\ComposerGitHooks\\ComposerPlugin"
     }
 }
