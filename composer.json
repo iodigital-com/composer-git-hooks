@@ -1,8 +1,5 @@
 {
     "name": "iodigital-com/composer-git-hooks",
-    "conflict": {
-        "isaac/composer-git-hooks": "*"
-    },
     "replace": {
         "isaac/composer-git-hooks": "*"
     },
