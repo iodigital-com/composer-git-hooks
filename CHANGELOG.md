@@ -1,6 +1,23 @@
 # Changelog 
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org) for the commit message format.
+
+## [3.0.0](https://github.com/iodigital-com/composer-git-hooks/compare/v2.2.0...v3.0.0) (2023-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* Rebrand to IO
+
+### Testing
+
+* Add "Static Analysis" GitHub workflow
+* Remove `composer.lock` file
+
+### Bug Fixes
+
+* Increase minimum version of the `slevomat/coding-standard` dependency to resolve a function length sniff violation
+* Add explicit return type annotation to support Composer versions prior to 2.1.10
+
 ## [2.2.0](https://github.com/iodigital-com/composer-git-hooks/compare/v2.1.0...v2.2.0) (2023-02-22)
 
 
