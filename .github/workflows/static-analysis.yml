@@ -1,0 +1,42 @@
+name: "Static Analysis"
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-analysis:
+    name: "Static Analysis"
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.4"
+          - "8.0"
+          - "8.1"
+          - "8.2"
+        composer-dependency-versions:
+          - "lowest"
+          - "highest"
+
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v4"
+
+      - name: "Setup PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: "none"
+
+      - name: "Install dependencies (Composer)"
+        uses: "ramsey/composer-install@v2"
+        with:
+          dependency-versions: "${{ matrix.composer-dependency-versions }}"
+
+      - name: "Analyze code using PHP_CodeSniffer"
+        run: "vendor/bin/phpcs"
+
+      - name: "Analyze code using PHPStan"
+        run: "vendor/bin/phpstan"
