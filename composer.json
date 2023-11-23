@@ -25,6 +25,7 @@
     "require-dev": {
         "composer/composer": "^2.0",
         "isaac/php-code-sniffer-standard": "^28.2.0",
+        "slevomat/coding-standard": "^7.1.0 || ^8.0",
         "phpstan/extension-installer": "^1.2.0",
         "phpstan/phpstan": "^1.10.1",
         "phpstan/phpstan-strict-rules": "^1.5.0"
