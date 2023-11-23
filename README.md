@@ -1,4 +1,4 @@
-# ISAAC Composer Git Hooks
+# iO Composer Git Hooks
 Set up the `.git/hooks` folder to run scripts found in the `bin/git-hooks/{hookName}.d` folders of the project.
 
 How it works:
@@ -14,7 +14,7 @@ How it works:
 Add the package as a dev dependency.
 
 ```bash
-composer require --dev isaac/composer-git-hooks
+composer require --dev iodigital-com/composer-git-hooks
 ```
 
 Add the package to the [allow-plugins section](https://getcomposer.org/doc/06-config.md#allow-plugins) of your `composer.json` file:
@@ -23,7 +23,7 @@ Add the package to the [allow-plugins section](https://getcomposer.org/doc/06-co
     "config": {
         "allow-plugins": {
             ...
-            "isaac/composer-git-hooks": true
+            "iodigital-com/composer-git-hooks": true
             ...
         }
     }
@@ -38,7 +38,7 @@ Add the following to `composer.json`:
 ```json
 "scripts": {
     ...
-    "install-git-hooks": "ISAAC\\ComposerGitHooks\\ComposerPlugin::process"
+    "install-git-hooks": "IODigital\\ComposerGitHooks\\ComposerPlugin::process"
     ...
 },
 ```

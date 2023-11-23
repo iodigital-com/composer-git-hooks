@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ISAAC\ComposerGitHooks;
+namespace IODigital\ComposerGitHooks;
 
 use Composer\Composer;
 use Composer\EventDispatcher\EventSubscriberInterface;

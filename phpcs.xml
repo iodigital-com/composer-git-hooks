@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ruleset name="phpcs-isaac">
+<ruleset>
     <!-- only scan following -->
     <file>src</file>
 
-    <!-- extend isaac ruleset -->
-    <rule ref="ISAAC"/>
+    <!-- extend IO ruleset -->
+    <rule ref="IO"/>
 
     <!-- Set phpcs versions. -->
     <config name="php_version" value="70400"/>

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ISAAC\ComposerGitHooks;
+namespace IODigital\ComposerGitHooks;
 
-use ISAAC\ComposerGitHooks\Exception\ProjectRootNotFoundException;
+use IODigital\ComposerGitHooks\Exception\ProjectRootNotFoundException;
 use Psr\Log\LoggerInterface;
 
 use function array_pad;
