@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0abeb619b942ad90d964714dfda7b9f",
+    "content-hash": "3204d3c7d2e63c71dae1dadbe31f2671",
     "packages": [],
     "packages-dev": [
         {
@@ -763,6 +763,7 @@
                 "issues": "https://github.com/isaaceindhoven/php-code-sniffer-standard",
                 "source": "https://github.com/isaaceindhoven/php-code-sniffer-standard/tree/v28.2.0"
             },
+            "abandoned": "iodigital-com/php-code-sniffer-standard",
             "time": "2022-11-04T10:56:37+00:00"
         },
         {

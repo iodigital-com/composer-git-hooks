@@ -68,7 +68,6 @@ class FileSystem
         return $projectRoot;
     }
 
-    // phpcs:ignore ObjectCalisthenics.Files.FunctionLength.ObjectCalisthenics\Sniffs\Files\FunctionLengthSniff
     public function getRelativePath(string $from, string $to): string
     {
         // some compatibility fixes for Windows paths
