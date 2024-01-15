@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: composer-git-hooks
+  title: Composer Git Hooks
+  description: Composer plugin to manage git hooks from `bin/git-hooks/[hook].d` folders.
+  namespace: io
+  tags:
+    - php
+  annotations:
+    jira/project-key: ICOMP
+    jira/label: composer-git-hooks
+spec:
+  type: library
+  lifecycle: development
+  owner: default/team_chapter_php_eindhoven
