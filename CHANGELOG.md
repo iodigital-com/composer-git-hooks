@@ -1,6 +1,12 @@
 # Changelog 
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org) for the commit message format.
+### [3.0.1](https://github.com/iodigital-com/composer-git-hooks/compare/v3.0.0...v3.0.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* create symlink when current symlink in .git/hooks folder is broken ([0b757a4](https://github.com/iodigital-com/composer-git-hooks/commit/0b757a435e9c825a5d8a23e86be0d7112c77521c))
 
 ## [3.0.0](https://github.com/iodigital-com/composer-git-hooks/compare/v2.2.0...v3.0.0) (2023-11-23)
 
