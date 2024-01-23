@@ -13,6 +13,7 @@ use function is_link;
 use function readlink;
 use function sprintf;
 use function symlink;
+use function unlink;
 
 class GitHooks
 {
@@ -85,13 +86,9 @@ class GitHooks
             $link = sprintf('%s/%s/%s', $this->projectRoot, self::GIT_HOOKS_DIRECTORY, $hook);
             $relativeTarget = $this->fileSystem->getRelativePath($link, $target);
 
-            if (!is_link($link) && !file_exists($link)) {
-                symlink(
-                    $relativeTarget,
-                    $link
-                );
-                $this->setExecutablePermission($link);
-                $this->logger->info(sprintf('Created symlink %s -> %s', $link, $relativeTarget));
+            if (!file_exists($link)) {
+                $this->removeSymlink($link);
+                $this->createSymlink($link, $relativeTarget);
             } elseif (!is_link($link) || readlink($link) === false || readlink($link) !== $relativeTarget) {
                 $this->logger->warning(sprintf('Git hook %s already exists, not using project hooks. ' .
                     'Consider moving your custom hook to %s.', $link, self::PROJECT_HOOKS_DIRECTORY));
@@ -104,6 +101,31 @@ class GitHooks
         foreach (self::PROJECT_DEFAULT_HOOK_DIRECTORIES as $hook) {
             $directory = sprintf('%s/%s/%s.d', $this->projectRoot, self::PROJECT_HOOKS_DIRECTORY, $hook);
             $this->fileSystem->createDirectoryIfNotExists($directory);
+        }
+    }
+
+    private function removeSymlink(string $link): void
+    {
+        if (!is_link($link)) {
+            return;
+        }
+        $linkTarget = readlink($link);
+        if (unlink($link)) {
+            $this->logger->info(
+                sprintf('Removed symlink %s -> %s', $link, ($linkTarget !== false) ? $linkTarget : '(unknown)')
+            );
+        } else {
+            $this->logger->warning(sprintf('Could not remove symlink %s', $link));
+        }
+    }
+
+    private function createSymlink(string $link, string $relativeTarget): void
+    {
+        if (symlink($relativeTarget, $link)) {
+            $this->logger->info(sprintf('Created symlink %s -> %s', $link, $relativeTarget));
+            $this->setExecutablePermission($link);
+        } else {
+            $this->logger->warning(sprintf('Could not create symlink %s -> %s', $link, $relativeTarget));
         }
     }
 

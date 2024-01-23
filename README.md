@@ -1,10 +1,11 @@
 # iO Composer Git Hooks
-Set up the `.git/hooks` folder to run scripts found in the `bin/git-hooks/{hookName}.d` folders of the project.
+
+Composer plugin to manage git hooks from `bin/git-hooks/[hook].d` folders.
 
 How it works:
 1. Include the package as a dev dependency
-2. On composer install/update, all git hooks (.git/hooks/{pre-commit,post-commit,...}) will be symlinked to this module's `scripts/chain-hook`.
-3. The `chain-hook` script will run the scripts found in the project's `bin/git-hooks/{hookName}.d` folder.
+2. On execution of Composer's `install` and `update` commands, symlinks will be created from `.git/hooks/[hook]` to this module's `scripts/chain-hook` script for all non-remote [git hooks](https://git-scm.com/docs/githooks#_hooks).
+3. The `chain-hook` script will run the scripts found in the project's `bin/git-hooks/[hook].d` folder.
 
 ## Prerequisites
 - A composer-managed project
@@ -49,12 +50,14 @@ composer run-script install-git-hooks
 ```
 
 ## Usage
-Add project specific git-hooks to `bin/git-hooks/{hookName}.d`. For example:
+
+Add project specific git-hooks to `bin/git-hooks/[hook].d`. For example:
 - `bin/git-hooks/pre-commit.d/phpstan`
 - `bin/git-hooks/pre-commit.d/phpcs`
 
 All scripts (for in this case `pre-commit`) should give a 0 exit code for the whole hook to succeed.
 
 ## Contribute
-Create a merge request.
+
+Create a pull request.
 This package makes use of the `composer` plugin interface. See the [composer documentation](https://getcomposer.org/doc/articles/plugins.md).
