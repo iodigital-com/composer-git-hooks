@@ -1,6 +1,13 @@
 # Changelog 
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org) for the commit message format.
+## [3.1.0](https://github.com/iodigital-com/composer-git-hooks/compare/v3.0.1...v3.1.0) (2024-02-06)
+
+
+### Features
+
+* Add PHP 8.3 support ([ca7ca3b](https://github.com/iodigital-com/composer-git-hooks/commit/ca7ca3b9af4e6cdebfbf36ddfb6c3afe14ad5f7a))
+
 ### [3.0.1](https://github.com/iodigital-com/composer-git-hooks/compare/v3.0.0...v3.0.1) (2024-01-23)
 
 
