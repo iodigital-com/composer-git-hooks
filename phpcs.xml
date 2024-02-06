@@ -9,5 +9,5 @@
 
     <!-- Set phpcs versions. -->
     <config name="php_version" value="70400"/>
-    <config name="testVersion" value="7.4-8.1"/>
+    <config name="testVersion" value="7.4-8.3"/>
 </ruleset>
