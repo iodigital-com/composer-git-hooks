@@ -1,5 +1,6 @@
 {
     "name": "iodigital-com/composer-git-hooks",
+    "abandoned": true,
     "replace": {
         "isaac/composer-git-hooks": "*"
     },
