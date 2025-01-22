@@ -8,6 +8,6 @@
     <rule ref="IO"/>
 
     <!-- Set phpcs versions. -->
-    <config name="php_version" value="70400"/>
-    <config name="testVersion" value="7.4-8.3"/>
+    <config name="php_version" value="80100"/>
+    <config name="testVersion" value="8.1-8.4"/>
 </ruleset>
