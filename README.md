@@ -1,5 +1,9 @@
 # iO Composer Git Hooks
 
+> [!WARNING]
+> This module is deprecated. 
+> You can use [Captain Hook](https://github.com/captainhookphp/captainhook) as an alternative Git hooks tool.
+
 Composer plugin to manage git hooks from `bin/git-hooks/[hook].d` folders.
 
 How it works:
