@@ -120,7 +120,11 @@ class FileSystem
     protected function performRecursive(string $source, string $dest, FileSystemAction $action): bool
     {
         if (is_link($source)) {
-            return readlink($source) !== false ? symlink(readlink($source), $dest) : false;
+            $linkTarget = readlink($source);
+            if ($linkTarget === false) {
+                return false;
+            }
+            return symlink($linkTarget, $dest);
         } elseif (is_file($source)) {
             return $action->invoke($source, $dest);
         } elseif (!is_dir($dest)) {
